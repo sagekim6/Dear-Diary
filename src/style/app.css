@@ -1,0 +1,35 @@
+:root{
+  /* Light Color */
+  --Dark-begie-color: #FAF1E6;
+  --Light-begie-color: #FDFAF6;
+  --Dark-green-color: #064420;
+  --Light-green-color: #E4EFE7;
+
+  /* Dark Color */
+  --Light-grey-color: #525252;
+  --Medium-grey-color: #414141;
+  --Dark-grey-color: #313131;
+  --Pink-color: #EC625F;
+}
+
+html, body{
+  margin: 0;
+  height: 100%;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--Light-begie-color);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+button{
+  cursor: pointer;
+}
+
