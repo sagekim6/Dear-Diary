@@ -37,38 +37,42 @@ function DiaryEditor({ onCreate }) {
 
   return (
     <div className="DiaryEditor">
-      <h1>Dear Diary</h1>
-      <input
-        type="text"
-        name="auther"
-        value={state.auther}
-        onChange={handleChangeData}
-        ref={inputRef}
-      />
-      <textarea
-        type="text"
-        name="content"
-        value={state.content}
-        onChange={handleChangeData}
-        ref={textareaRef}
-      />
-      <div>
-        <span>오늘의 감정 </span>
-        <select
-          name="emotion"
-          value={state.emotion}
+      <div className="EditContainer">
+        <h1>Dear Diary</h1>
+        <input
+          type="text"
+          name="auther"
+          placeholder="작성자"
+          value={state.auther}
           onChange={handleChangeData}
-        >
-          <option value={1}>1</option>
-          <option value={2}>2</option>
-          <option value={3}>3</option>
-          <option value={4}>4</option>
-          <option value={5}>5</option>
-        </select>
+          ref={inputRef}
+        />
+        <textarea
+          type="text"
+          name="content"
+          placeholder="오늘의 일기"
+          value={state.content}
+          onChange={handleChangeData}
+          ref={textareaRef}
+        />
+        <div className="todayEmotion">
+          <span>오늘의 감정 </span>
+          <select
+            name="emotion"
+            value={state.emotion}
+            onChange={handleChangeData}
+          >
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+            <option value={4}>4</option>
+            <option value={5}>5</option>
+          </select>
+        </div>
+        <button className="saveBtn" onClick={handleSubmit}>
+          저장
+        </button>
       </div>
-      <button className="saveBtn" onClick={handleSubmit}>
-        저장
-      </button>
     </div>
   );
 }
