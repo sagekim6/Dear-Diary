@@ -35,9 +35,12 @@ function DiaryItem({ list, onRemove, onEdit }) {
   return (
     <li className="DiaryItem">
       <span>
-        작성자: {list.auther} | 감정: {list.emotion}
+        작성자: <strong>{list.auther}</strong> | 감정:{" "}
+        <strong>{list.emotion}</strong>
       </span>
-      <span>작성일: {new Date(list.created_date).toLocaleString()}</span>
+      <span className="Created-Date">
+        작성일: {new Date(list.created_date).toLocaleString()}
+      </span>
       <div>
         {isEdit ? (
           <textarea
@@ -51,14 +54,22 @@ function DiaryItem({ list, onRemove, onEdit }) {
         {isEdit ? (
           <>
             <div>
-              <button onClick={handleEdit}>완료</button>
-              <button onClick={handleQuitEdit}>취소</button>
+              <button className="btn Finished" onClick={handleEdit}>
+                완료
+              </button>
+              <button className="btn" onClick={handleQuitEdit}>
+                취소
+              </button>
             </div>
           </>
         ) : (
           <>
-            <button onClick={toggleIsEdit}>수정</button>
-            <button onClick={handleRemove}>삭제</button>
+            <button className="btn Edit" onClick={toggleIsEdit}>
+              수정
+            </button>
+            <button className="btn" onClick={handleRemove}>
+              삭제
+            </button>
           </>
         )}
       </div>

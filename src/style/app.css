@@ -100,6 +100,51 @@ button{
 }
 
 .EditContainer .saveBtn:hover{
-  transform: scale(1.1, 1.1);
+  transform: scale(1, 1.1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* DiaryList */
+.DiaryList{
+  margin: 24px;
+}
+
+.DiaryList .DiaryItem{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  background-color: var(--Dark-begie-color);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.DiaryList .Created-Date{
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.DiaryList .btn{
+  border: none;
+  width: 60px;
+  height: 20px;
+  background: none;
+}
+
+.DiaryList .btn:hover{
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.DiaryList .Finished{
+  border-right: #525252 1px solid;
+}
+
+.DiaryList .Edit{
+  border-right: #525252 1px solid;
+}
+
+.DiaryList p{
+  min-height: 50px;
+  border-top: 1px solid var(--Light-grey-color);
+  padding-top: 10px;
 }
