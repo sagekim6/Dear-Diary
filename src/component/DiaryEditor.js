@@ -1,8 +1,10 @@
-import { useRef, useState } from "react";
+import { useRef, useState, memo, useContext } from "react";
+import { DiaryDispatchContext } from "../App";
 
-function DiaryEditor({ onCreate }) {
+function DiaryEditor() {
   const inputRef = useRef();
   const textareaRef = useRef();
+  const { onCreate } = useContext(DiaryDispatchContext);
 
   const [state, setState] = useState({
     auther: "",
@@ -76,11 +78,4 @@ function DiaryEditor({ onCreate }) {
     </div>
   );
 }
-export default DiaryEditor;
-
-/*
-
-1. 일기 입력 폼 만들기
-2. 입력한 일기를 리스트에 추가하기
-
-*/
+export default memo(DiaryEditor);

@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { DiaryStateContext } from "../App";
 import DiaryItem from "./DiaryItem";
 
-function DiaryList({ lists = [], onRemove, onEdit }) {
+function DiaryList({ onRemove, onEdit }) {
+  const lists = useContext(DiaryStateContext);
+
   return (
     <div className="DiaryList">
       <h2>{lists.length}개의 일기가 있습니다.</h2>

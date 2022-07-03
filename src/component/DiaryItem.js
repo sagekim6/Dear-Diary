@@ -1,10 +1,12 @@
-import { useRef, useState } from "react";
+import { useRef, useState, memo, useContext } from "react";
+import { DiaryDispatchContext } from "../App";
 
-function DiaryItem({ list, onRemove, onEdit }) {
+function DiaryItem({ list }) {
   const [isEdit, setIsEdit] = useState(false);
   const [newContent, setNewContent] = useState(list.content);
   const newTextarea = useRef();
   const toggleIsEdit = () => setIsEdit(!isEdit);
+  const { onRemove, onEdit } = useContext(DiaryDispatchContext);
 
   const handleRemove = () => {
     if (window.confirm("삭제하시겠습니까?")) {
@@ -77,4 +79,4 @@ function DiaryItem({ list, onRemove, onEdit }) {
   );
 }
 
-export default DiaryItem;
+export default memo(DiaryItem);
