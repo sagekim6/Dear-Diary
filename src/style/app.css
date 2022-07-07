@@ -34,3 +34,62 @@ html, body{
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/* MyBtn */
+.MyBtn{
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  font-size: 18px;
+  white-space: nowrap;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.MyBtn_default{
+  background-color: #ececec;
+  color: black;
+}
+
+.MyBtn_negative{
+  background-color: #fd565f;
+  color: white;
+}
+
+.MyBtn_positive{
+  background-color: #64c964;
+  color: white;
+}
+
+/* Header */
+header{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header button{
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+header > div {
+  display: flex;
+}
+
+header .head_text{
+  width: 50%;
+  font-size: 25px;
+  justify-content: center;
+}
+
+header .head_btn_right{
+  width: 25%;
+  justify-content: end;
+}
+
+header .head_btn_left{
+  width: 25%;
+  justify-content: start;
+}
