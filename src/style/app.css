@@ -3,8 +3,34 @@
 
 html, body{
   margin: 0;
-  height: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  min-height: 100vh;
+}
+
+@media (min-width: 650px){
+  .App{
+    width: 640px;
+  }
+}
+
+@media (min-width: 650px){
+  .App{
+    width: 90vw;
+  }
+}
+#root{
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.App{
   font-family: 'IBM Plex Sans KR', sans-serif;
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--Light-begie-color);
+  min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
 }
