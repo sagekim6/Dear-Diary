@@ -1,5 +1,11 @@
+import DiaryEditor from "../component/DiaryEditor";
+
 const New = () => {
-  return <div>New page</div>;
+  return (
+    <div>
+      <DiaryEditor />
+    </div>
+  );
 };
 
 export default New;
