@@ -8,7 +8,7 @@ const Home = () => {
   const diaryList = useContext(DiaryStateContext);
 
   const [curDate, setcurDate] = useState(new Date());
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(diaryList);
 
   const headText = `${curDate.getFullYear()}.${curDate.getMonth() + 1}`;
 
@@ -23,7 +23,7 @@ const Home = () => {
       const lastDay = new Date(
         curDate.getFullYear(),
         curDate.getMonth() + 1,
-        1
+        0
       ).getTime();
 
       setData(

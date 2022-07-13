@@ -76,7 +76,7 @@ function App() {
       type: "CREATE",
       data: {
         id: dataID.current,
-        data: new Date(date).getTime(),
+        date: new Date(date).getTime(),
         content,
         emotion,
       },
