@@ -70,7 +70,7 @@ export const DiaryDispatchContenxt = createContext();
 
 function App() {
   const [data, dispatch] = useReducer(reducer, dummyData);
-  const dataID = useRef(0);
+  const dataID = useRef(6);
   const onCreate = (date, content, emotion) => {
     dispatch({
       type: "CREATE",
@@ -113,7 +113,7 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/edit" element={<Edit />} />
+              <Route path="/edit/:id" element={<Edit />} />
               <Route path="/new" element={<New />} />
               <Route path="/diary/:id" element={<Diary />} />
             </Routes>
